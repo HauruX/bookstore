@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<head>
+	<title>publish</title>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui"></script>
+    <link href="css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+		body{
+			width: 1220px;
+			margin: auto;
+			/*font-family: "微软雅黑";*/
+		}
+		.page-header{
+			margin-bottom: 0px;
+		}
+    	.span2{
+    		margin-top: 25px;
+    		padding-top: 20px;
+    		border: 1px solid #f5f5f5;
+    		border-radius: 10px;
+    	}
+    	.span2 .nav-header{
+    		font-size: 20px;
+    	}
+    	/*固定导航栏*/
+    	#leader{
+    		position: fixed;
+    		width: 169px;
+    	}
+    	#allOrder{
+    		margin-left: 200px;
+    	}
+
+    	li{
+    		height: 30px;
+    		line-height: 25px;
+    	}
+
+    	.page-header{
+    		border-bottom: 0px;
+    	}
+
+    	/*样式方框*/
+    	.form-horizontal{
+    		border: 1px solid #b0b0b0;
+    		padding-top: 20px;
+    		margin-bottom: 20px;
+    		width: 800px;
+    	}
+
+    	/*隐藏的上传组件*/
+    	#uploadPicHide350, #uploadPicHide200, #uploadPicHide80, #uploadPicHide54{
+    		display: none;
+    	}
+
+    </style>
+
+        <script type="text/javascript">
+		$(document).ready(function(){
+			$("#pOldDesBlock").hide();
+			$("#pIsOld").click(
+				function(){
+					if(this.checked) {
+						$("#pOldDesBlock").show();
+	                }
+	                else {
+	                	$("#pOldDesBlock").hide();
+	                }
+				});
+			$("#uploadPic350").click(function(){
+				$("#uploadPicHide350").click();
+			});
+			$("#uploadPic200").click(function(){
+				$("#uploadPicHide200").click();
+			});
+			$("#uploadPic80").click(function(){
+				$("#uploadPicHide80").click();
+			});
+			$("#uploadPic54").click(function(){
+				$("#uploadPicHide54").click();
+			});
+		});
+    </script>
+</head>
+<body>
+
+     <!--  导航列表 -->
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="row-fluid">
+					<div class="span2" id="leader">
+						<ul class="nav nav-list">
+							<li class="nav-header">
+								订单中心
+							</li>
+							<li>
+								<a href="#">全部订单</a>
+							</li>
+							<li>
+								<a href="#">待支付</a>
+							</li>
+							<li>
+								<a href="#">待收货</a>
+							</li>
+							<li>
+								<a href="#">已关闭</a>
+							</li>
+							<li class="nav-header">
+								个人中心
+							</li>
+							<li>
+								<a href="#">我的资料</a>
+							</li>
+							<li>
+								<a href="#">账号安全</a>
+							</li>
+							<li class="nav-header">
+								卖家中心
+							</li>
+							<li class="active">
+								<a href="#">发布商品</a>
+							</li>
+							<li>
+								<a href="#">我的售卖</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="span10" id="allOrder">
+	
+						<div class="page-header"   style="padding-bottom: 0px">
+							<h1   style="line-height: 17px; padding-top: 8px">
+								发布商品
+							</h1>
+						</div> 
+						</br></br>
+						<form class="form-horizontal">
+
+							<div class="control-group">
+								<label class="control-label" for="pName">书名</label>
+									<div class="controls">
+									<input id="pName" type="text" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="pPrice">价格</label>
+									<div class="controls">
+									<input id="pPrice" type="text" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="pNum">数量</label>
+									<div class="controls">
+									<input id="pNum" type="text" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="pISBN">ISBN</label>
+									<div class="controls">
+									<input id="pISBN" type="text" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="pAuthor">作者</label>
+									<div class="controls">
+									<input id="pAuthor" type="text" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="pPushlish">出版社</label>
+									<div class="controls">
+									<input id="pPushlish" type="text" />
+								</div>
+							</div>
+							<div class="control-group">
+								 <label class="control-label" for="pTypeId">上架类型</label>
+								<div class="controls">
+									<select id="pTypeId" runat="server" >
+										<option value="1">学习</option>
+										<option value="2">文学</option>
+										<option value="3">艺术</option>
+										<option value="4">哲学</option>
+										<option value="5">IT</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="pImgPath">描述</label>
+								<div class="controls">
+									<!-- <input id="pImgPath" type="text" /> -->
+									<textarea id="pDescription" rows="3" cols="20"></textarea>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="">上传图片</label>
+								<div class="controls">
+									<!-- <input id="pImgPath" type="text" /> -->
+									<input type="file" id="uploadPicHide350" accept="image/*" />
+									<input type="file" id="uploadPicHide200" accept="image/*" />
+									<input type="file" id="uploadPicHide80" accept="image/*" />
+									<input type="file" id="uploadPicHide54" accept="image/*" />
+									<button class="btn" type="button" id="uploadPic350">350X350像素</button>
+									<button class="btn" type="button" id="uploadPic200">200X200像素</button>
+									<button class="btn" type="button" id="uploadPic80">80X80像素</button>
+									<button class="btn" type="button" id="uploadPic54">54X54像素</button>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="pIsOld">是二手书</label>
+								<div class="controls">
+									<input id="pIsOld" type="checkbox" >
+								</div>
+							</div>
+							<div class="control-group" id="pOldDesBlock">
+								<label class="control-label" for="pOldDes">二手书描述</label>
+								<div class="controls">
+									<!-- <input id="pImgPath" type="text" /> -->
+									<textarea id="pOldDes" rows="3" cols="20"></textarea>
+								</div>
+							</div>
+
+
+							<div class="control-group">
+								<div class="controls">
+									 <input class="btn" type="submit" value="发布"></input>
+								</div>
+							</div>
+
+						</form>
+	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

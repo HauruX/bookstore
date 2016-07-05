@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<head>
+	<title>check</title>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui"></script>
+    <link href="css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+		body{
+			width: 1220px;
+			margin: auto;
+			/*font-family: "微软雅黑";*/
+		}
+		.page-header{
+			margin-bottom: 0px;
+		}
+    	.span2{
+    		margin-top: 25px;
+    		padding-top: 20px;
+    		border: 1px solid #f5f5f5;
+    		border-radius: 10px;
+    	}
+    	.span2 .nav-header{
+    		font-size: 20px;
+    	}
+    	/*固定导航栏*/
+/*    	#leader{
+    		position: fixed;
+    		width: 169px;
+    	}
+    	#allOrder{
+    		margin-left: 200px;
+    	}*/
+
+    	li{
+    		height: 30px;
+    		line-height: 25px;
+    	}
+
+    	.page-header{
+    		border-bottom: 0px;
+    	}
+
+    	/*样式方框*/
+    	.form-horizontal{
+    		border: 1px solid #b0b0b0;
+    		padding-top: 20px;
+    		margin-bottom: 20px;
+    		width: 800px;
+    	}
+
+    	/*隐藏的上传组件*/
+    	#uploadPicHide350, #uploadPicHide200, #uploadPicHide80, #uploadPicHide54{
+    		display: none;
+    	}
+
+		#uploadPicHide200{
+		    /* border: 1px solid #cccccc; */
+		    padding: 4px 6px;
+		    margin-bottom: 10px;
+		    display: inline-block;
+		    margin-bottom: 0;
+		    /* vertical-align: middle; */
+		    /* cursor: not-allowed; */
+		    background-color: #eeeeee;
+		}
+    </style>
+
+        <script type="text/javascript">
+		$(document).ready(function(){
+			$("#pOldDesBlock").hide();
+			$("#pIsOld").click(
+				function(){
+					if(this.checked) {
+						$("#pOldDesBlock").show();
+	                }
+	                else {
+	                	$("#pOldDesBlock").hide();
+	                }
+				});
+			$("#uploadPic350").click(function(){
+				$("#uploadPicHide350").click();
+			});
+			$("#uploadPic200").click(function(){
+				$("#uploadPicHide200").click();
+			});
+			$("#uploadPic80").click(function(){
+				$("#uploadPicHide80").click();
+			});
+			$("#uploadPic54").click(function(){
+				$("#uploadPicHide54").click();
+			});
+		});
+    </script>
+</head>
+<body>
+
+     <!--  导航列表 -->
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="row-fluid">
+					
+
+					<div class="span10" id="allOrder">
+	
+						<div class="page-header"   style="padding-bottom: 0px">
+							<h1   style="line-height: 17px; padding-top: 8px">
+								审核提交的商品
+							</h1>
+						</div> 
+						</br></br>
+						<form class="form-horizontal">
+
+							<div class="control-group">
+								<label class="control-label" for="pName">书名</label>
+									<div class="controls">
+									<input id="pName" type="text" readonly="readonly" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="pPrice">价格</label>
+									<div class="controls">
+									<input id="pPrice" type="text" readonly="readonly" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="pNum">数量</label>
+									<div class="controls">
+									<input id="pNum" type="text" readonly="readonly" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="pISBN">ISBN</label>
+									<div class="controls">
+									<input id="pISBN" type="text" readonly="readonly" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="pAuthor">作者</label>
+									<div class="controls">
+									<input id="pAuthor" type="text" readonly="readonly" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="pPushlish">出版社</label>
+									<div class="controls">
+									<input id="pPushlish" type="text" readonly="readonly" />
+								</div>
+							</div>
+							<div class="control-group">
+								 <label class="control-label" for="pTypeId">上架类型</label>
+								<div class="controls">
+<!-- 									<select id="pTypeId" runat="server" >
+										<option value="1">学习</option>
+										<option value="2">文学</option>
+										<option value="3">艺术</option>
+										<option value="4">哲学</option>
+										<option value="5">IT</option>
+									</select> -->
+									<input id="pTypeId" type="text" readonly="readonly" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="pImgPath">描述</label>
+								<div class="controls">
+									<!-- <input id="pImgPath" type="text" /> -->
+									<textarea id="pDescription" rows="3" cols="20" readonly="readonly"></textarea>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="">上传图片</label>
+								<div class="controls">
+<!-- 									<input type="file" id="uploadPicHide350" accept="image/*" />
+									<input type="file" id="uploadPicHide200" accept="image/*" />
+									<input type="file" id="uploadPicHide80" accept="image/*" />
+									<input type="file" id="uploadPicHide54" accept="image/*" />
+									<button class="btn" type="button" id="uploadPic350">350X350像素</button>
+									<button class="btn" type="button" id="uploadPic200">200X200像素</button>
+									<button class="btn" type="button" id="uploadPic80">80X80像素</button>
+									<button class="btn" type="button" id="uploadPic54">54X54像素</button> -->
+									<img id="uploadPicHide200" src="img/ku1.jpg" />
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="pIsOld">是二手书</label>
+								<div class="controls">
+									<input id="pIsOld" type="checkbox" readonly="readonly" >
+								</div>
+							</div>
+							<div class="control-group" id="pOldDesBlock">
+								<label class="control-label" for="pOldDes">二手书描述</label>
+								<div class="controls">
+									<!-- <input id="pImgPath" type="text" /> -->
+									<textarea id="pOldDes" rows="3" cols="20" disabled="disabled"></textarea>
+								</div>
+							</div>
+
+
+							<div class="control-group">
+								<div class="controls">
+									 <input class="btn" type="submit" value="审核通过"></input>
+								</div>
+							</div>
+
+						</form>
+	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

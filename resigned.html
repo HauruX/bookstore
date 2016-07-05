@@ -1,0 +1,110 @@
+﻿
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui"></script>
+        <link href="css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <style>
+        body{
+            /*background-color: #e7fafa;*/
+            /*background-image: url(img/register_pattern_whole.png);*/
+            background:url(img/register_pattern_whole.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            /*background-repeat: no-repeat;*/
+        }
+        #sp{
+            margin-left: 40%;
+            height: 400px;
+            margin: auto;
+            margin-top: 10%;
+            width: 350px;
+            background-color: #FFF;
+            padding-left: 0px;
+            padding-top: 0px;
+            border-radius: 10px;
+        }
+        #inputName, #inputPassword,#inputPasswordAgain{
+            width: 145px;
+            background-repeat: no-repeat; 
+            padding-left: 30px;
+            margin-left: -65px;
+        }
+        #inputName{
+            background-image:url(img/用户名-01.png); 
+        }
+        #inputPassword{
+            background-image:url(img/密码-01.png); 
+        }
+        #inputPasswordAgain{
+            background-image:url(img/确认密码-01.png); 
+        }
+        #check{
+            margin-left: 115px;
+        }
+        #check label{
+            font-size: 10px;
+        }
+        #check .btn{
+            margin-top: 20px;
+        }
+        </style>
+    </head>
+    <body>
+
+        <div class="row-fluid">
+            <div  id="sp"> 
+                <form class="form-horizontal">
+
+                    <legend style="margin:0 auto;text-align:center">注册</legend>
+
+                    <div class="control-group">
+                        <label class="control-label" for="inputName" style="width:110px">用户名</label>
+                        <div class="controls">
+                            <input id="inputName" type="text" />
+                        </div>
+                    </div>
+
+
+                    <div class="control-group">
+                        <label class="control-label" for="inputPassword" style="width:110px">密码</label>
+                        <div class="controls">
+                            <input id="inputPassword" type="password" />
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                       <label class="control-label" for="inputPasswordAgain" style="width:110px">确认密码</label>
+                       <div class="controls">
+                          <input id="inputPasswordAgain" type="password" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                       <label class="control-label" for="inputPasswordAgain" style="width:110px">验证问题</label>
+                       <div class="controls">
+                          <input id="inputPasswordAgain" type="password" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                       <label class="control-label" for="inputPasswordAgain" style="width:110px">验证答案</label>
+                       <div class="controls">
+                          <input id="inputPasswordAgain" type="password" />
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <div class="controls" id="check">
+                            <label class="checkbox"><input type="checkbox" />我已阅读《乐读吧消费者条款》</label> 
+                            <input type="submit" class="btn" value="注册" />
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+         </div>
+    </body>
+</html>

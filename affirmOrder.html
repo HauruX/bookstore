@@ -1,0 +1,136 @@
+<html>
+	<head>
+		<title>affirm order</title>
+		<style type="text/css">
+			body{
+				width: 1220px;
+				margin: auto;
+				font-family: "微软雅黑";
+			}
+			/*确认收货地址*/
+			.affirmAddress{
+				font-weight: 100;
+				line-height: 40px;
+			}
+			.affirmAddress .smallTitle{
+				border-bottom: 2px solid #e6e6e6;
+				font-size: 20px;
+			}
+			.affirmAddress a{
+	    		float: right;
+	    		text-decoration: none;
+			    width: 118px;
+				height: 28px;
+				font-size: 12px;
+				line-height: 28px;
+				text-align: center;
+				color: #757575;
+				border: 1px solid #f5f5f5;
+				margin-top: 10px;
+			}
+
+			/*确认订单信息*/
+			.affirmOrder{
+				margin-top: 30px;
+				font-weight: 100;
+				line-height: 40px;
+			}
+			.affirmOrder .smallTitle{
+				border-bottom: 2px solid #e6e6e6;
+				font-size: 20px;
+			}
+			/*订单项*/
+	    	.orderItems{
+	    		border: 1px solid #b0b0b0;
+	    		margin-top: 20px;`
+	    		padding: 10px 10px 10px 30px;
+	    	}
+	    	.orderItem{
+	    		height: 80px;
+	    		padding: 10px 0px 10px 0px;
+	    	}
+	    	.orderItem img{
+	    		float: left;
+	    	}
+	    	.orderItem .orderItemDes{
+	    		padding: 15px 0px 0px 90px;
+	    	}
+
+	    	/*简要信息块*/
+			.briefOrderInfo{
+				line-height: 10px;
+				/*border: 1px solid #b0b0b0;*/
+				border: 1px solid #e54346;
+				float: right;
+				margin-top: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+
+			/*提交订单按钮*/
+			.submitOrder  a{
+				float: right;
+	    		text-decoration: none;
+			    width: 118px;
+				height: 28px;
+				font-size: 12px;
+				line-height: 28px;
+				text-align: center;
+				color: #757575;
+				background-color: #e54346;
+				color: #fff;
+				/*border: 1px solid #fff;*/
+				margin-top: 10px;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			});
+		</script>
+	</head>
+	<body>
+		<div class="affirmAddress">
+			<div class="smallTitle">
+				确认收货地址
+			</div>
+			<div>
+				寄送至 湖南省 长沙市 天心区 文源街道 铁道学院 (** 收) 15*******
+				<a href="">修改本地址</a>
+			</div>
+		</div>
+		<div class="affirmOrder">
+			<div class="smallTitle">
+				确认订单信息
+			</div>
+			<div class="orderItems">
+				<div class="orderItem">
+					<img src="img/ku1_80.jpg">
+					<div class="orderItemDes">
+						<div class="orderItemDes1">女装 柔软针织茄克(千鸟格) 161334 优衣库UNIQLO</div>
+						<div class="orderItemDes2">299.00元× 1</div>
+					</div>
+				</div>
+				<div class="orderItem">
+					<img src="img/ku1_80.jpg">
+					<div class="orderItemDes">
+						<div class="orderItemDes1">女装 柔软针织茄克(千鸟格) 161334 优衣库UNIQLO</div>
+						<div class="orderItemDes2">299.00元× 1</div>
+					</div>
+				</div>
+			</div>
+			<div style="height:110px">
+				<div class="briefOrderInfo">
+					<p>实付款： ¥ 29.90</p>
+					<p>寄送至： 湖南省 长沙市 天心区 铁道学院</p>
+					<p>收货人： ** 15********</p>
+				</div>
+			</div>
+			
+			<div class="submitOrder">
+				<a href="">提交订单</a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<head>
+	<title>apply for sell</title>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui"></script>
+    <link href="css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+		body{
+			width: 1220px;
+			margin: auto;
+			/*font-family: "微软雅黑";*/
+		}
+		.page-header{
+			margin-bottom: 0px;
+		}
+    	.span2{
+    		margin-top: 25px;
+    		padding-top: 20px;
+    		border: 1px solid #f5f5f5;
+    		border-radius: 10px;
+    	}
+    	.span2 .nav-header{
+    		font-size: 20px;
+    	}
+    	/*固定导航栏*/
+    	#leader{
+    		position: fixed;
+    		width: 169px;
+    	}
+    	#allOrder{
+    		margin-left: 200px;
+    	}
+
+    	li{
+    		height: 30px;
+    		line-height: 25px;
+    	}
+
+    	.page-header{
+    		border-bottom: 0px;
+    	}
+
+    	/*样式方框*/
+    	.form-horizontal{
+    		border: 1px solid #b0b0b0;
+    		padding-top: 20px;
+    		margin-bottom: 20px;
+    		width: 800px;
+    	}
+
+		.errorForAlertPwd{
+			width: 218px;
+			height: 20px;
+			margin-bottom: 10px;
+			margin-left: 179px;
+			line-height: 20px;
+		    background-color: #FFF2F2;
+		    border: 1px solid #FF8080;
+		}
+
+    </style>
+    <script type="text/javascript">
+			// $(document).ready(function(){
+			// 	$(".errorForAlertPwd").hide();
+			// });
+			// function alertPwdJS(){
+			// 	var pwd = "123456";
+			// 	var errorMessage;
+			// 	var oldPwd = $("#oldPwd").val();
+			// 	var newPwd = $("#newPwd").val();
+			// 	var confirmNewPwd = $("#confirmNewPwd").val();
+			// 	if(pwd != oldPwd){
+			// 		errorMessage = "现用密码输入错误";
+			// 		$("#oldPwd").focus();
+			// 	}
+			// 	else if(newPwd == ""){
+			// 		errorMessage = "新密码不能为空";
+			// 		$("#newPwd").focus();
+			// 	}
+			// 	else if(newPwd != confirmNewPwd){
+			// 		errorMessage = "两次新密码输入不一致";
+			// 		$("#confirmNewPwd").focus();
+			// 	}
+			// 	if(errorMessage == null){
+			// 		return true;
+			// 	}
+			// 	else{
+			// 		$(".errorMessageForAlertPwd").text(errorMessage);
+			// 		$(".errorForAlertPwd").show();
+			// 		return false;
+			// 	}
+			// }
+    </script>
+</head>
+<body>
+
+     <!--  导航列表 -->
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="row-fluid">
+					<div class="span2" id="leader">
+						<ul class="nav nav-list">
+							<li class="nav-header">
+								订单中心
+							</li>
+							<li>
+								<a href="#">全部订单</a>
+							</li>
+							<li>
+								<a href="#">待支付</a>
+							</li>
+							<li>
+								<a href="#">待收货</a>
+							</li>
+							<li>
+								<a href="#">已关闭</a>
+							</li>
+							<li class="nav-header">
+								个人中心
+							</li>
+							<li>
+								<a href="#">我的资料</a>
+							</li>
+							<li>
+								<a href="#">账号安全</a>
+							</li>
+							<li class="divider">
+							</li>
+							<li class="active">
+								<a href="#">售卖申请</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="span10" id="allOrder">
+	
+						<div class="page-header"   style="padding-bottom: 0px">
+							<h1   style="line-height: 17px; padding-top: 8px">
+								售卖申请
+							</h1>
+						</div> 
+						</br></br>
+						<form class="form-horizontal" onsubmit="return alertPwdJS()">
+
+<!-- 		                     <div class="errorForAlertPwd">
+		                     	<p class="errorMessageForAlertPwd">error</p>
+		                     </div> -->
+
+							<div class="control-group">
+							  <label class="control-label" for="uFsecurityamount">保证金额度</label>
+							     <div class="controls">
+								    <input id="uFsecurityamount" type="text" autocomplete="off" />
+							     </div>
+							</div>
+							<div class="control-group">
+							  <label class="control-label" for="uBussinessLicense">营业执照类型</label>
+							     <div class="controls">
+								    <input id="uBussinessLicense" type="text" autocomplete="off" />
+							     </div>
+							</div>
+							<div class="control-group">
+							  <label class="control-label" for="uLicenseNum">营业执照证件号</label>
+							     <div class="controls">
+								    <input id="uLicenseNum" type="text" autocomplete="off" />
+							     </div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="uIsSecondhand">是二手商家</label>
+								<div class="controls">
+									<input id="uIsSecondhand" type="checkbox" >
+								</div>
+							</div>
+
+
+							<div class="control-group">
+								<div class="controls">
+									 <input class="btn" type="submit" value="保存"></input>
+								</div>
+							</div>
+
+						</form>
+	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
